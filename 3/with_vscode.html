@@ -1,0 +1,291 @@
+<!DOCTYPE HTML>
+<html lang="jp" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Visual Studio Codeでプログラミング - textbook</title>
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "light" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../0/first.html">表紙</a></li><li class="chapter-item expanded "><a href="../1/introduction.html"><strong aria-hidden="true">1.</strong> 導入</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../1/first_step.html"><strong aria-hidden="true">1.1.</strong> 初めの一歩</a></li><li class="chapter-item expanded "><a href="../1/install_7zip.html"><strong aria-hidden="true">1.2.</strong> 7zipのインストール</a></li><li class="chapter-item expanded "><a href="../1/install_texteditor.html"><strong aria-hidden="true">1.3.</strong> テキストエディタについて</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../1/install_terapad.html"><strong aria-hidden="true">1.3.1.</strong> Terapadのインストール</a></li><li class="chapter-item expanded "><a href="../1/install_vscode.html"><strong aria-hidden="true">1.3.2.</strong> Visual Studio Codeのインストール</a></li><li class="chapter-item expanded "><a href="../1/install_font.html"><strong aria-hidden="true">1.3.3.</strong> フォントのインストール</a></li></ol></li><li class="chapter-item expanded "><a href="../1/install_git.html"><strong aria-hidden="true">1.4.</strong> Gitのインストール</a></li><li class="chapter-item expanded "><a href="../1/install_golang.html"><strong aria-hidden="true">1.5.</strong> Golangのインストール</a></li><li class="chapter-item expanded "><a href="../1/install_python.html"><strong aria-hidden="true">1.6.</strong> Pythonのインストール</a></li></ol></li><li class="chapter-item expanded "><a href="../2/hello_world.html"><strong aria-hidden="true">2.</strong> Hello World</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../2/c.html"><strong aria-hidden="true">2.1.</strong> Cでハローワールド</a></li><li class="chapter-item expanded "><a href="../2/cpp.html"><strong aria-hidden="true">2.2.</strong> C++でハローワールド</a></li><li class="chapter-item expanded "><a href="../2/golang.html"><strong aria-hidden="true">2.3.</strong> Golangでハローワールド</a></li><li class="chapter-item expanded "><a href="../2/python.html"><strong aria-hidden="true">2.4.</strong> Pythonでハローワールド</a></li><li class="chapter-item expanded "><a href="../2/other.html"><strong aria-hidden="true">2.5.</strong> その他の言語でハローワールド</a></li></ol></li><li class="chapter-item expanded "><a href="../3/local.html"><strong aria-hidden="true">3.</strong> ローカルで動かしてみよう</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../3/compile.html"><strong aria-hidden="true">3.1.</strong> コンパイルをしてみよう</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../3/with_terapad.html"><strong aria-hidden="true">3.1.1.</strong> Terapad でプログラミング</a></li><li class="chapter-item expanded "><a href="../3/with_vscode.html" class="active"><strong aria-hidden="true">3.1.2.</strong> Visual Studio Codeでプログラミング</a></li></ol></li><li class="chapter-item expanded "><a href="../3/interpreter.html"><strong aria-hidden="true">3.2.</strong> インタープリタを動かしてみよう</a></li></ol></li><li class="chapter-item expanded "><a href="../4/make_block_break.html"><strong aria-hidden="true">4.</strong> ブロック崩しを作ってみよう</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">textbook</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#visual-studio-code-でプログラミング" id="visual-studio-code-でプログラミング">Visual Studio Code でプログラミング</a></h1>
+<p>1章でインストールが終わっていれば、<br />
+デスクトップに<code>Visual Studio Code</code> というアイコンがあるはずです。</p>
+<p><img src="vscode_icon.png" alt="" /></p>
+<p>このマークが<code>Visual Studio Code</code>のアイコンです。</p>
+<h2><a class="header" href="#テキストエディタを開く" id="テキストエディタを開く">テキストエディタを開く</a></h2>
+<p><code>3.program/golang</code>を開いてください。
+そしてフォルダ内の何もないところを右クリックしてください。</p>
+<p><img src="open.png" alt="" /></p>
+<p>出たメニューに<code>Codeで開く</code>というのがありますね。
+これをクリックしてください。
+こうすると、<code>Visual Studio Code</code>でファイルを保存すると勝手にこのフォルダに保存されます。</p>
+<p><img src="opened.png" alt="" /></p>
+<p>開くとリリースノートというのが出ますが、特に関係ないので上の×を押して閉じましょう。<br />
+ようこそというのもありますが、いらないので閉じましょう。</p>
+<p><img src="closed.png" alt="" /></p>
+<p>この画面になったら私と同じ状態です。</p>
+<h2><a class="header" href="#新しいテキストファイルを作る" id="新しいテキストファイルを作る">新しいテキストファイルを作る</a></h2>
+<p>左側の灰色の部分の上のほうに<code>開いているエディター</code>と<code>GOLANG</code>と書かれています。<br />
+<code>開いているエディター</code>は現在<code>Visual Studio Code</code>で開いているファイルの一覧が表示されます。<br />
+今は何も開いていないので何も書かれていません。</p>
+<p><code>GOLANG</code>は先ほど新しく作ったフォルダで、右クリックをして<code>Visual Studio Code</code>を開いたため、<br />
+<code>3.program/golang</code> のフォルダを<code>Visual Studio Code</code>が開いていますよということです。</p>
+<p>次に左側の灰色の開いている部分を右クリックします。</p>
+<p><img src="new.png" alt="" /></p>
+<p>上にある新しいファイルをクリックしましょう。</p>
+<p><img src="name.png" alt="" /></p>
+<p>すると何やら入力できそうな欄が出るので、ここに<code>main.go</code>と入力しましょう。<br />
+そうするとこのようになります。</p>
+<p><img src="named.png" alt="" /></p>
+<p>この状態で先ほど <code>2. テキストエディタを開く</code> で<code>Visual Studio Code</code>を開いたフォルダを見てみましょう。<br />
+<code>3.program/golang</code>に新しく<code>main.go</code>ができていると思います。</p>
+<p>もし名前を間違ってしまっても気にしないでください。<br />
+今作ったテキストファイルを右クリックして、メニュー中に名前の変更というのがありますので、簡単に変更できます。</p>
+<h2><a class="header" href="#写経" id="写経">写経</a></h2>
+<p>いよいよプログラムを書いてを0から書いていきます。<br />
+右側の白い部分に文字を書けます。</p>
+<p><img src="write.png" alt="" /></p>
+<p>図の赤い部分にテキストを入力します。<br />
+ここでは<code>package main</code>と書いて改行しています。</p>
+<p>図の青い部分は行番号です。2つ改行しているので3まで表示されていますね。<br />
+ここまで書けましたか？ ここまで1文字一句間違えてはいけません。<br />
+どんどん書いていきましょう。</p>
+<pre><code>package main
+
+import (
+	&quot;fmt&quot;
+)
+
+func main() {
+	fmt.Println(&quot;Hello world!&quot;)
+}
+</code></pre>
+<p>これを入力しましょう。<br />
+これはコピペはやめましょう。<br />
+なぜかというと、1文字一句正しく入力することもプログラマーとして必要な能力だからです。<br />
+このように教材をひたすら正しく入力することをプログラマー界隈では写経(しゃきょう)といいます。
+プログラマーは写経を通してその言語の書式を学びます。</p>
+<p><a href="../1/install_font.html">フォント</a>のページを読んだあなたは聞いたことがあると思いますが、<br />
+プログラムにおいて空白は水平タブか半角空白のみを使ってください。<br />
+つまり、キーボードの半角全角キーの下にあるTabキーを使うか半角入力にした状態でスペースキーを押して空白を入力してください。</p>
+<p>ここまで書いている間に右下にバーナーが邪魔してくると思います。</p>
+<p><img src="barrier.png" alt="" /></p>
+<p>とりあえず今は無視するか、右上の×を押して閉じましょう。</p>
+<p>すべて入力で来たら保存します。<br />
+保存は<code>Ctrl+S</code>でできます。<br />
+<code>Ctrl+S</code>というのはキーボードのControlキーとSのキーを同時に押すことを意味します。<br />
+マウスでも上のファイルから保存できます。<br />
+<img src="save.png" alt="" /></p>
+<h1><a class="header" href="#コンパイラを使ってみる" id="コンパイラを使ってみる">コンパイラを使ってみる</a></h1>
+<p>さてここで正しく入力できましたか？<br />
+これはプログラムのソースコードと呼ばれます。<br />
+それではいよいよコンパイラを使います。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../3/with_terapad.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../3/interpreter.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="../3/with_terapad.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="../3/interpreter.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+        
+        
+        <script type="text/javascript">
+            window.playpen_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>
