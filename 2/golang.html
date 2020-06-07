@@ -153,6 +153,24 @@
 <p>C言語は1972年、C++は1985年、Go言語は2009年なのでだいぶ新しいです。</p>
 <p>Go言語は検索するときに<code>go</code>で検索すると動詞のgoが一致して検索しずらいのもあって、<br />
 普通Golangと呼ばれます。</p>
+<h2><a class="header" href="#ハローワールド" id="ハローワールド">ハローワールド</a></h2>
+<p><a href="https://play.golang.org">https://play.golang.org</a> を開いてください。</p>
+<p><img src="2-3-1.png" alt="" /></p>
+<pre><code>package main
+
+import (
+	&quot;fmt&quot;
+)
+
+func main() {
+	fmt.Println(&quot;Hello, playground&quot;)
+}
+</code></pre>
+<p>このページは私が何も準備しなくても、最初から文字列の違うハローワールドが書いてあります。<br />
+上の<code>Run</code>をクリックしてみましょう。下に<code>Hello, playground Program exited.</code>と表示されます。</p>
+<p>C言語やC++言語となんとなく似ているのがわかるでしょうか。<br />
+プログラミング言語はある程度共通点があることが多いです。<br />
+なので1つ言語を学ぶと新しくほかの言語を学ぶのが早くなります。</p>
 
                     </main>
 
@@ -191,6 +209,21 @@
 
         </div>
 
+        
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            var socket = new WebSocket("ws://localhost:3001");
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
         
 
         

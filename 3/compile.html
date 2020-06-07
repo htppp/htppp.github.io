@@ -148,6 +148,91 @@
                 <div id="content" class="content">
                     <main>
                         <h1><a class="header" href="#コンパイルをしてみよう" id="コンパイルをしてみよう">コンパイルをしてみよう</a></h1>
+<p>さていよいよコンパイルです。
+ここまでコンパイルについて何も説明なく進めてきました。
+このページの中でコンパイルについて説明します。</p>
+<h2><a class="header" href="#初めてのコンパイル" id="初めてのコンパイル">初めてのコンパイル</a></h2>
+<p>それではテキストエディタを開きます。</p>
+<p>1章でインストールが終わっていれば、<br />
+デスクトップに<code>Visual Studio Code</code> というアイコンがあるはずです。</p>
+<p><img src="vscode_icon.png" alt="" /></p>
+<p>このマークが<code>Visual Studio Code</code>のアイコンです。</p>
+<p>これをクリックしてもいいのですが、
+先に今からプログラムを書いていく場所を作りましょう。</p>
+<h2><a class="header" href="#1-保存場所を作る" id="1-保存場所を作る">1. 保存場所を作る</a></h2>
+<p>どこでもいいのですが、とりあえずデスクトップに1つフォルダを作りましょう。<br />
+フォルダ名は<code>3.local</code>にしましょう。<br />
+そして新しく作ったフォルダの中に更に2つフォルダを作りましょう。<br />
+フォルダの名前は<code>golang</code>と<code>python</code>にします。</p>
+<p>このようになります。</p>
+<pre><code>Desktop/3.local/
+├── golang
+└── python
+</code></pre>
+<h2><a class="header" href="#2-テキストエディタを開く" id="2-テキストエディタを開く">2. テキストエディタを開く</a></h2>
+<p>新しく作った<code>3.local/golang</code>を開いてください。
+そしてフォルダ内の何もないところを右クリックしてください。</p>
+<p><img src="open.png" alt="" /></p>
+<p>出たメニューに<code>Codeで開く</code>というのがありますね。
+これをクリックしてください。
+こうすると、<code>Visual Studio Code</code>でファイルを保存すると勝手にこのフォルダに保存されます。</p>
+<p><img src="opened.png" alt="" /></p>
+<p>開くとリリースノートというのが出ますが、特に関係ないので上の×を押して閉じましょう。<br />
+ようこそというのもありますが、いらないので閉じましょう。</p>
+<p><img src="closed.png" alt="" /></p>
+<p>この画面になったら私と同じ状態です。</p>
+<h2><a class="header" href="#3-新しいテキストファイルを作る" id="3-新しいテキストファイルを作る">3. 新しいテキストファイルを作る</a></h2>
+<p>左側の灰色の部分の上のほうに<code>開いているエディター</code>と<code>GOLANG</code>と書かれています。<br />
+<code>開いているエディター</code>は現在<code>Visual Studio Code</code>で開いているファイルの一覧が表示されます。<br />
+今は何も開いていないので何も書かれていません。</p>
+<p><code>GOLANG</code>は先ほど新しく作ったフォルダで、右クリックをして<code>Visual Studio Code</code>を開いたため、<br />
+<code>3.local/golang</code> のフォルダを<code>Visual Studio Code</code>が開いていますよということです。</p>
+<p>次に左側の灰色の開いている部分を右クリックします。</p>
+<p><img src="new.png" alt="" /></p>
+<p>上にある新しいファイルをクリックしましょう。</p>
+<p><img src="name.png" alt="" /></p>
+<p>すると何やら入力できそうな欄が出るので、ここに<code>main.go</code>と入力しましょう。<br />
+そうするとこのようになります。</p>
+<p><img src="named.png" alt="" /></p>
+<p>この状態で先ほど <code>2. テキストエディタを開く</code> で<code>Visual Studio Code</code>を開いたフォルダを見てみましょう。<br />
+<code>3.local/golang</code>に新しく<code>main.go</code>ができていると思います。</p>
+<p>もし名前を間違ってしまっても気にしないでください。<br />
+今作ったテキストファイルを右クリックして、メニュー中に名前の変更というのがありますので、簡単に変更できます。</p>
+<h2><a class="header" href="#4-写経" id="4-写経">4. 写経</a></h2>
+<p>いよいよプログラムを書いてを0から書いていきます。<br />
+右側の白い部分に文字を書けます。</p>
+<p><img src="write.png" alt="" /></p>
+<p>図の赤い部分にテキストを入力します。<br />
+ここでは<code>package main</code>と書いて改行しています。</p>
+<p>図の青い部分は行番号です。2つ改行しているので3まで表示されていますね。<br />
+ここまで書けましたか？ ここまで1文字一句間違えてはいけません。<br />
+どんどん書いていきましょう。</p>
+<pre><code>package main
+
+import (
+	&quot;fmt&quot;
+)
+
+func main() {
+	fmt.Println(&quot;Hello world!&quot;)
+}
+</code></pre>
+<p>これを入力しましょう。<br />
+これはコピペはやめましょう。<br />
+なぜかというと、1文字一句正しく入力することもプログラマーとして必要な能力だからです。
+このように教材をひたすら正しく入力することをプログラマー界隈では写経といいます。</p>
+<p>ここまで書いている間に右下にバーナーが邪魔してくると思います。</p>
+<p><img src="barrier.png" alt="" /></p>
+<p>とりあえず今は無視するか、右上の×を押して閉じましょう。</p>
+<ol start="5">
+<li></li>
+</ol>
+<p>さてここで正しく入力できましたか？<br />
+これはプログラムのソースコードと呼ばれます。<br />
+それではいよいよローカルで</p>
+<p>さてここで正しく入力できたとして、このままではハローワールドできません。</p>
+<p>Webブラウザの時はボタンを押せば実行できたのですが、<br />
+それはいろいろWebサイトが良しなにやってくれていたので実行できたのです。</p>
 
                     </main>
 
@@ -186,6 +271,21 @@
 
         </div>
 
+        
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            var socket = new WebSocket("ws://localhost:3001");
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
         
 
         

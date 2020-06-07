@@ -152,7 +152,7 @@
 次はC++言語でハローワールドします。</p>
 <p>C++言語はC言語を拡張して作られたプログラミング言語で、<br />
 大規模なプログラムが作りやすくなっています。</p>
-<p>C言語と同様に、コンパイルが必要なコンパイル言語という種類のプログラミング言語です。
+<p>C言語と同様に、コンパイルが必要なコンパイル言語という種類のプログラミング言語です。<br />
 C++言語はよく「しーぷらぷら」と呼ばれます。</p>
 <h2><a class="header" href="#ハローワールド" id="ハローワールド">ハローワールド</a></h2>
 <p>このURLを開いてください。<br />
@@ -182,8 +182,9 @@ C++ではでは<code>std::cout &lt;&lt; &quot;Hello world!!&quot; &lt;&lt; std::
 <hr />
 <p>それでは実行してみましょう。<br />
 といってもURLを開いた状態で、既に実行された状態になっています_(:3 」∠ )_</p>
-<p><img src="./img/2-1-4.png" alt="" /></p>
-<p>実行結果は<code>!</code>の数が増えていますがC言語のハローワールドと一緒です。</p>
+<p><img src="./2-1-4.png" alt="" /></p>
+<p>ちょっと違いをつけるために<code>!</code>の数を増やしていますが、<br />
+実行結果はC言語のハローワールドと一緒です。</p>
 <hr />
 <p>少しいじってみましょう。</p>
 <pre><code>std::cout &lt;&lt; &quot;Hello world!!&quot; &lt;&lt; std::endl;
@@ -200,8 +201,10 @@ int main() {
 }
 </code></pre>
 <p>実行してみましょう。</p>
-<p><img src="./img/2-1-5.png" alt="" /></p>
-<p>正しく実行できたでしょうか。</p>
+<p><img src="./2-1-5.png" alt="" /></p>
+<p>正しく実行できたでしょうか。<br />
+<code>!</code>が1つの行がC言語の<code>printf(&quot;Hello world!\n&quot;);</code>で出力された文字列で、<br />
+<code>!</code>が2つの行がC++言語の<code>std::cout &lt;&lt; &quot;Hello world!! &lt;&lt; std::endl;&quot;</code>で出力された文字列です。</p>
 <p>正しく実行できなくても気にしないでください。<br />
 正しく実行できるURLを用意しています(/'ω')/
 <a href="https://wandbox.org/permlink/xAmO61t4VeNgkffs">https://wandbox.org/permlink/xAmO61t4VeNgkffs</a></p>
@@ -246,6 +249,21 @@ C++言語はC言語の拡張なので、C言語のプログラムがある程度
 
         </div>
 
+        
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            var socket = new WebSocket("ws://localhost:3001");
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
         
 
         

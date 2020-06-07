@@ -149,7 +149,8 @@
                     <main>
                         <h1><a class="header" href="#pythonでハローワールド" id="pythonでハローワールド">Pythonでハローワールド</a></h1>
 <p>ここまでコンパイル言語のハローワールドを見ていきました。<br />
-次にコンパイル言語でないインタープリタ言語のハローワールドを見ていきます。</p>
+次にコンパイル言語でないインタープリタ言語のハローワールドを見ていきます。<br />
+コンパイル言語とは何か、インタープリタ言語言語とは何か、という説明は3章でします。</p>
 <p>Pythonはプログラムが短く書きやすいインタープリタ言語の一つです。
 また、数値計算に強く、科学計算の分野でよく使われています。<br />
 例えば最近話題のディープラーニングではPythonがとっても良く使われます。</p>
@@ -159,8 +160,14 @@ Pythonのハローワールドは１行です。</p>
 <pre><code>print(&quot;Hello world!&quot;)
 </code></pre>
 <p><a href="https://code.sololearn.com/cOAXyhEmN1f7#py">https://code.sololearn.com/cOAXyhEmN1f7#py</a></p>
-<p>今まで見てきたコンパイル言語と比べてかなり短いですね。</p>
-<p>これはコンパイル言語ではないインタープリタ言語の特徴の一つです。</p>
+<p>今まで見てきたコンパイル言語と比べてかなり短いですね。<br />
+これはコンパイル言語ではないインタープリタ言語の特徴の一つです。</p>
+<p>プログラムを書く時に短くかけるということは、早く作れるということにつながります。<br />
+じゃあ短いほうがいいよねとなりますが、
+短いということはそれなりに情報が少ないということです。<br />
+それによる弊害がもちろんあります。</p>
+<p>さっと作りたくて、その弊害が気にならないときインタープリタ言語はとても良い選択肢になります。<br />
+プログラミング言語は所詮道具にすぎません。作りたいものにあった道具を使いましょう。</p>
 
                     </main>
 
@@ -199,6 +206,21 @@ Pythonのハローワールドは１行です。</p>
 
         </div>
 
+        
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            var socket = new WebSocket("ws://localhost:3001");
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
         
 
         

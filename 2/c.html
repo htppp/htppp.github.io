@@ -170,7 +170,7 @@ int main(){
 <hr />
 <p>赤まるのところの<code>Run (or) Ctrl+Enter)</code> をクリックすると、<br />
 上に書かれたプログラムが実行されます。</p>
-<p><img src="../img/2-1-1.png" alt="" /></p>
+<p><img src="./2-1-1.png" alt="" /></p>
 <hr />
 <p>実行すると下の黒い部分に実行結果が表示されます。<br />
 今はそこに</p>
@@ -190,12 +190,12 @@ int main(){
 	return 0;
 }
 </code></pre>
-<p><img src="../img/2-1-2.png" alt="" /><br />
+<p><img src="./2-1-2.png" alt="" /><br />
 こんな感じです。</p>
 <hr />
 <p>それでは<code>Run (or) Ctrl+Enter)</code>を押して実行してみましょう。<br />
 正しく入力できていれば下の黒い部分がこのようになります。</p>
-<p><img src="../img/2-1-3.png" alt="" /></p>
+<p><img src="./2-1-3.png" alt="" /></p>
 <pre><code>start
 Hello world!
 0
@@ -253,6 +253,21 @@ Finish
 
         </div>
 
+        
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            var socket = new WebSocket("ws://localhost:3001");
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
         
 
         

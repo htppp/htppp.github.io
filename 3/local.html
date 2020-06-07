@@ -148,6 +148,12 @@
                 <div id="content" class="content">
                     <main>
                         <h1><a class="header" href="#ローカルで動かしてみよう" id="ローカルで動かしてみよう">ローカルで動かしてみよう</a></h1>
+<p>2章まででハローワールドをざっくり見てきました。<br />
+最近はWebブラウザ上で動かせるので便利になりましたね。<br />
+ここからはWebブラウザからいったん離れて、<br />
+手持ちのパソコン上でプログラムを動かしていこうと思います。</p>
+<h2><a class="header" href="#準備" id="準備">準備</a></h2>
+<p>さて準備ですが既に1章で終わっています。次へ進みましょう。</p>
 
                     </main>
 
@@ -186,6 +192,21 @@
 
         </div>
 
+        
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            var socket = new WebSocket("ws://localhost:3001");
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
         
 
         
